@@ -1,0 +1,26 @@
+﻿@model Category
+
+<form method="post" asp-action="Remove">
+    <div class="border-bottom p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Edit Category</h2>
+            <hr />
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Name" >Name</label>
+            <input asp-for="Name" class="form-control disabled" />
+           <button asp-for="Name" type="button" class="btn btn-secondary disabled" control-id="ControlID-55"></button>
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+         <div class="mb-3">
+            <label asp-for="DisplayOrder" >Display Order</label>
+            <input asp-for="DisplayOrder" class="form-control disabled" />
+            <span asp-validation-for="DisplayOrder" class="text-danger"></span>
+       
+        </div>
+        <button type="submit" class="btn btn-outline-danger" style="width:150px">Delete</button>
+        <button asp-controller="Category" asp-action="Index" class="btn btn-outline-primary" style="width:150px"> Back to List </button>
+    </div>
+</form>
+
